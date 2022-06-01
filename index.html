@@ -17,31 +17,87 @@
     <title>Spotify Web</title>
 </head>
 
-<body>
+<body class="debugs">
 
     <main>
-        <!-- Flex Container | To arrange #Sidebar and #Main-Content horizontally -->
-        <div class="d-flex">
+        <!-- Main Container | To arrange #Sidebar and #Main-Content horizontally -->
+        <div id="main-container" class="d-flex bg-primary border">
 
             <!-- Sidebar | Left Side -->
-            <nav id="sidebar"></nav>
+            <nav id="sidebar" class="d-flex justify-between bg-black border">
+
+                <!-- Sidebar Navigation Menu -->
+                <section id="sidebar-menu" class="border">
+                    <!-- Spotify Main Logo -->
+                    <div class="main-logo">
+                        <a href="#"><img class="w-100" src="images/logo-small.svg" alt="Main Logo Spotify"></a>
+                        <a href="#"><img class="w-100" src="images/logo.svg" alt="Main Logo Spotify"></a>
+                    </div>
+                    <!-- Navigation -->
+                    <div class="navigation">
+                        <ul>
+                            <li>
+                                <a href="#"><img class="w-100" src="images/home.svg" alt="Home"><span> Home</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="w-100" src="images/search.svg" alt="Cerca"><span> Cerca</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><img class="w-100" src="images/libreria.svg" alt="La tua libreria"><span> La tua libreria</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- My Playlist List -->
+                    <div class="my-playlist">
+                        <!-- Title -->
+                        <h4 class="uppercase">Playlist</h4>
+                        <!-- Create Playlist -->
+                        <i class="fa-solid fa-square-plus fa-3x"></i><span> Crea Playlist</span>
+                        <!-- Playlist List -->
+                        <ul>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                            <li><a href="#">Nome Playlist</a></li>
+                        </ul>
+                    </div>
+
+                </section>
+
+                <!-- Profile Settings -->
+                <section id="profile-settings" class="border">
+                    <!-- Install App -->
+                    <div class="install-app">
+                        <a href="#"><i class="fa-regular fa-circle-down"></i><span> Installa app</span></a>
+                    </div>
+                    <!-- User Profile -->
+                    <div class="profile">
+                        <a href="#"><img src="images/profile.svg" alt="John Doe"> <span><h4>John Doe</h4></span></a>
+                    </div>
+                </section>
+            </nav>
 
             <!-- Main Content Box | Right Side -->
-            <div id="main-content">
+            <div id="main-content" class="w-100 border">
 
                 <!-- Header of Main Content Box -->
-                <header>
+                <header class="border">
 
                     <!-- Upgrade Box | Fixed -->
-                    <div id="upgrade-box"></div>
+                    <div id="upgrade-box" class="w-100 bg-black border"></div>
 
                     <!-- navbar -->
-                    <nav id="main-navbar"></nav>
+                    <nav id="main-navbar" class="border">link link link link link link link</nav>
 
                 </header>
 
                 <!-- Recently Played Section -->
-                <section id="recently-played"></section>
+                <section id="recently-played">
+                    
+                </section>
 
                 <!-- Suggestions Playlist Mix -->
                 <section id="suggestions"></section>
@@ -55,7 +111,7 @@
     </main>
 
     <!-- Main Footer | Bottom Side -->
-    <footer id="main-footer">
+    <footer id="main-footer" class="bg-secondary border">
 
     </footer>
 
