@@ -17,7 +17,7 @@
     <title>Spotify Web</title>
 </head>
 
-<body class="debug">
+<body class="debugs">
 
     <main>
         <!-- Main Container | To arrange #Sidebar and #Main-Content horizontally -->
@@ -120,32 +120,57 @@
     <footer id="main-footer" class="bg-secondary border">
 
         <!-- Spotify Player -->
-        <section id="player" class="d-flex h-100 border">
+        <section id="player" class="d-flex justify-around h-100 border">
 
             <!-- Now Playing | Left Col -->
-            <div id="now-playing" class="d-flex border">
+            <div id="now-playing" class="d-flex justify-between align-center border">
                 <!-- Track Album Cover -->
-                <div class="album-cover border"></div>
+                <div class="album-cover t-center border">
+                    <img class="w-100 h-100" src="images/sinister.jpeg" alt="Sinister">
+                </div>
                 <!-- Track Name -->
-                <div class="track-name border"></div>
+                <div class="track-name border">
+                    <h3>Sinister</h3>
+                    <span>Brano</span>
+                    <span>Nome</span>
+                </div>
                 <!-- Track Actions -->
-                <div class="track-actions border"></div>
+                <div class="track-actions d-flex justify-around t-center border">
+                    <a href="#" class="fa-regular fa-heart"></a>
+                    <a href="#" class="fa-regular fa-folder"></a>
+                </div>
             </div>
             
             <!-- Track Controls | Middle Col -->
-            <div id="track-controls" class="border">
+            <div id="track-controls" class="d-flex content-center align-center border">
                 <!-- Track Buttons -->
-                <div class="track-btn border"></div>
+                <div class="track-btn w-100 t-center border">
+                    <a href="#" class="c-white fa-solid fa-shuffle"></a>
+                    <a href="#" class="c-white fa-solid fa-backward-step"></a>
+                    <a href="#" class="c-white fa-solid fa-circle-play"></a>
+                    <a href="#" class="c-white fa-solid fa-forward-step"></a>
+                    <a href="#" class="c-white fa-solid fa-rotate-right"></a>
+                </div>
                 <!-- Track Progress Bar -->
-                <div class="progress-bar border"></div>
+                <div class="progress-bar w-100 d-flex align-center justify-between border">
+                    <span class="progress-time c-white">0:25</span>
+                    <div class="bar"></div>
+                    <span class="total-time c-white">4:35</span>
+                </div>
             </div>
             
             <!-- Player Controls | Right Col -->
-            <div id="player-controls" class="d-flex border">
+            <div id="player-controls" class="d-flex justify-between">
                 <!-- Controls Buttons -->
-                <div class="player-btn border"></div>
+                <div class="player-btn d-flex justify-between align-center">
+                    <a href="#" class="c-white fa-solid fa-list"></a>
+                    <a href="#" class="c-white fa-solid fa-display"></a>
+                </div>
                 <!-- Volume Bar -->
-                <div class="volume-bar border"></div>
+                <div class="volume-bar d-flex align-center justify-between">
+                    <a href="#" class="c-white fa-solid fa-volume-high"></a>
+                    <div class="bar"></div>
+                </div>
             </div>
         </section>
     </footer>

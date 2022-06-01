@@ -33,8 +33,11 @@
 }
 
 .d-flex{display: flex;}
+.justify-center {justify-content: center;}
 .justify-between {justify-content: space-between;}
-
+.justify-around {justify-content: space-around;}
+.align-center {align-items: center;}
+.content-center {align-content: center;}
 
 .w-50 {width: 50%;}
 .w-100 {width: 100%;}
@@ -65,7 +68,7 @@
 /*********** Generics ***********/
 header {padding-top: 80px;}
 
-h4 {color: var(--white);}
+h3, h4 {color: var(--white);}
 
 
 /* ******************************************** */
@@ -161,22 +164,63 @@ h4 {color: var(--white);}
 #player {}
 
 /* Now Playing */
-#now-playing {width: 25%;}
+#now-playing {width: 30%;}
 
-#now-playing .album-cover {width: 30%;}
+#now-playing .album-cover {
+    width: 25%;
+    height: 80%;
+}
+
+#now-playing .album-cover img {
+    object-fit: contain;
+    width: 80%;}
 
 #now-playing .track-name {width: 45%;}
 
-#now-playing .track-actions {width: 25%;}
+#now-playing .track-name span {display: block;}
+
+#now-playing .track-actions {
+    width: 20%;
+    height: 80%;
+    font-size: 0.8rem;
+
+    flex-flow: column wrap;
+}
 
 
 /* Track Controls */
-#track-controls {width: 50%;}
+#track-controls {
+    width: 35%;
+    flex-flow: column wrap;
+}
 
 #track-controls .track-btn {height: 50%;}
 
+#track-controls .track-btn a {padding: 0.3rem 0.5rem;}
+
 #track-controls .progress-bar {height: 50%;}
 
+#track-controls .progress-bar span {
+    font-size: 0.8rem;
+    width: 15%;
+}
+
+#track-controls .progress-bar .bar {
+    width:60%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--grey);
+}
+
+#track-controls .progress-bar .bar::before {
+    content: "";
+    display: inline-block;
+    width: 40%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--white);
+    transform: translateY(-10px);
+}
 
 
 /* Player Controls */
@@ -184,10 +228,30 @@ h4 {color: var(--white);}
 
 #player-controls .player-btn {width: 30%;}
 
-#player-controls .volume-bar {width: 70%;}
+#player-controls .player-btn a {
+    font-size: 0.8rem;
+    padding-right: 5px;
+}
+
+#player-controls .volume-bar {width: 60%;}
+
+#player-controls .volume-bar .bar {
+    width: 60%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--grey);
+}
 
 
-
+#player-controls .volume-bar .bar::before {
+    content: "";
+    display: inline-block;
+    width: 40%;
+    height: 5px;
+    border-radius: 5px;
+    background-color: var(--white);
+    transform: translateY(-10px);
+}
 
 
 
