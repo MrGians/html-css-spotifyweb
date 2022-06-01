@@ -161,10 +161,10 @@ h3, h4 {color: var(--white);}
 #main-footer {height: 80px;}
 
 /*********** Spotify Player Section ***********/
-#player {}
+#player {padding: 0 0.5rem;}
 
 /* Now Playing */
-#now-playing {width: 30%;}
+#now-playing {width: 40%;}
 
 #now-playing .album-cover {
     width: 25%;
@@ -180,7 +180,7 @@ h3, h4 {color: var(--white);}
 #now-playing .track-name span {display: block;}
 
 #now-playing .track-actions {
-    width: 20%;
+    width: 25%;
     height: 80%;
     font-size: 0.8rem;
 
@@ -196,7 +196,7 @@ h3, h4 {color: var(--white);}
 
 #track-controls .track-btn {height: 50%;}
 
-#track-controls .track-btn a {padding: 0.3rem 0.5rem;}
+#track-controls .track-btn a {padding: 0 0.5rem;}
 
 #track-controls .progress-bar {height: 50%;}
 
@@ -236,7 +236,7 @@ h3, h4 {color: var(--white);}
 #player-controls .volume-bar {width: 60%;}
 
 #player-controls .volume-bar .bar {
-    width: 60%;
+    width: 75%;
     height: 5px;
     border-radius: 5px;
     background-color: var(--grey);
@@ -313,12 +313,67 @@ h3, h4 {color: var(--white);}
 
     /*********** Main Content | Right Side ***********/
    
+
+    /*********** Main Footer | Bottom Side ***********/
+    /*********** Spotify Player Section ***********/
+    #player #now-playing a, 
+    #player #player-controls a {font-size: 1rem;}
+    #player #track-controls a {font-size: 1.5rem;}
+
+    /* Now Playing */
+    #now-playing {width: 25%;}
+
+    /* Track Controls */
+    #track-controls {width: 50%;}
+
+    #track-controls .track-btn a {padding: 0 1rem;}
+
+    #track-controls .progress-bar {width: 90%;}
+
+    /* Player Controls */
+    #player-controls {width: 25%;}
+
 }
 
 
 /* Responsive Tablet View from 768px to 991px */
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+
+    /*********** Main Container ***********/
+    /*********** Sidebar | Left Side ***********/
+
+
+    /*********** Main Content | Right Side ***********/
+   
+
+    /*********** Main Footer | Bottom Side ***********/
+
+   /*********** Spotify Player Section ***********/
+    #player #now-playing {width: 250px;}
+    #player #player-controls {width: 250px;}
+
+    /* Now Playing */
+    #now-playing .track-actions {flex-direction: row;}
+    #now-playing .track-name {width: 30%;}
+
+    /* Track Controls */
+    #track-controls .progress-bar .bar {width:85%;}
+
+}
 
 
 /* Responsive Desktop View from 992px */
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+
+    /*********** Main Container ***********/
+    /*********** Sidebar | Left Side ***********/
+
+
+    /*********** Main Content | Right Side ***********/
+   
+
+    /*********** Main Footer | Bottom Side ***********/
+
+    /*********** Spotify Player Section ***********/
+
+}
