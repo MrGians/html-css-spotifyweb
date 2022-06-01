@@ -157,6 +157,38 @@ h4 {color: var(--white);}
 /*********** Main Footer | Bottom Side ***********/
 #main-footer {height: 80px;}
 
+/*********** Spotify Player Section ***********/
+#player {}
+
+/* Now Playing */
+#now-playing {width: 25%;}
+
+#now-playing .album-cover {width: 30%;}
+
+#now-playing .track-name {width: 45%;}
+
+#now-playing .track-actions {width: 25%;}
+
+
+/* Track Controls */
+#track-controls {width: 50%;}
+
+#track-controls .track-btn {height: 50%;}
+
+#track-controls .progress-bar {height: 50%;}
+
+
+
+/* Player Controls */
+#player-controls {width: 25%;}
+
+#player-controls .player-btn {width: 30%;}
+
+#player-controls .volume-bar {width: 70%;}
+
+
+
+
 
 
 /*********** LAYOUT RESPONSIVE ***********/

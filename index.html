@@ -17,7 +17,7 @@
     <title>Spotify Web</title>
 </head>
 
-<body class="debugs">
+<body class="debug">
 
     <main>
         <!-- Main Container | To arrange #Sidebar and #Main-Content horizontally -->
@@ -119,6 +119,35 @@
     <!-- Main Footer | Bottom Side -->
     <footer id="main-footer" class="bg-secondary border">
 
+        <!-- Spotify Player -->
+        <section id="player" class="d-flex h-100 border">
+
+            <!-- Now Playing | Left Col -->
+            <div id="now-playing" class="d-flex border">
+                <!-- Track Album Cover -->
+                <div class="album-cover border"></div>
+                <!-- Track Name -->
+                <div class="track-name border"></div>
+                <!-- Track Actions -->
+                <div class="track-actions border"></div>
+            </div>
+            
+            <!-- Track Controls | Middle Col -->
+            <div id="track-controls" class="border">
+                <!-- Track Buttons -->
+                <div class="track-btn border"></div>
+                <!-- Track Progress Bar -->
+                <div class="progress-bar border"></div>
+            </div>
+            
+            <!-- Player Controls | Right Col -->
+            <div id="player-controls" class="d-flex border">
+                <!-- Controls Buttons -->
+                <div class="player-btn border"></div>
+                <!-- Volume Bar -->
+                <div class="volume-bar border"></div>
+            </div>
+        </section>
     </footer>
 
 </body>
