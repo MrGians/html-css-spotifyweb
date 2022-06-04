@@ -29,45 +29,48 @@
                 <!-- Sidebar Navigation Menu -->
                 <section id="sidebar-menu" class="border">
                     <!-- Spotify Main Logo -->
-                    <div class="main-logo">
-                        <a href="#"><img class="w-100" src="images/logo-small.svg" alt="Main Logo Spotify"></a>
+                    <div class="main-logo p-10">
+                        <!-- Logo X-Small -->
+                        <a href="#"><img src="images/logo-small.svg" alt="Main Logo Spotify"></a>
+                        <!-- Logo Medium -->
                         <a href="#"><img src="images/logo.svg" alt="Main Logo Spotify"></a>
                     </div>
                     <!-- Navigation -->
                     <div class="navigation">
                         <ul>
-                            <li>
-                                <a href="#"><img src="images/home.svg" alt="Home"><span> Home</span></a>
+                            <li class="p-10">
+                                <a href="#"><img src="images/home.svg" alt="Home"><span class="px-10"> Home</span></a>
                             </li>
-                            <li>
-                                <a href="#"><img src="images/search.svg" alt="Cerca"><span> Cerca</span></a>
+                            <li class="p-10">
+                                <a href="#"><img src="images/search.svg" alt="Cerca"><span class="px-10"> Cerca</span></a>
                             </li>
-                            <li>
-                                <a href="#"><img src="images/libreria.svg" alt="La tua libreria"><span> La tua libreria</span></a>
+                            <li class="p-10">
+                                <a href="#"><img src="images/libreria.svg" alt="La tua libreria"><span class="px-10"> La tua libreria</span></a>
                             </li>
                         </ul>
                     </div>
                     <!-- My Playlist List -->
                     <div class="my-playlist py-20">
-                        <!-- Title -->
-                        <h4 class="uppercase">Playlist</h4>
-                        <!-- Create New Playlist -->
-                        <div class="new-playlist d-flex">
-                            <a href="#">
-                                <i class="fa-solid fa-square-plus fa-3x"></i>
-                                <span> Crea Playlist</span>
-                            </a>
-                        </div>
-                        
-                        <!-- Playlist List -->
                         <ul>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
-                            <li><a href="#">Nome Playlist</a></li>
+                            <!-- Title -->
+                            <li class="p-10">
+                                <h4 class="uppercase">Playlist</h4>
+                            </li>
+                            <!-- Create New Playlist -->
+                            <li class="new-playlist p-10">
+                                <a href="#">
+                                <i class="fa-solid fa-square-plus fa-2x"></i>
+                                <span class="px-10">Crea Playlist</span>
+                                </a>
+                            </li>
+                            <!-- Playlist List -->
+                            <li class="p-10"><a href="#">Nome Playlist</a></li>
+                            <li class="p-10"><a href="#">Nome Playlist</a></li>
+                            <li class="p-10"><a href="#">Nome Playlist</a></li>
+                            <li class="p-10"><a href="#">Nome Playlist</a></li>
+                            <li class="p-10"><a href="#">Nome Playlist</a></li>
+                            <li class="p-10"><a href="#">Nome Playlist</a></li>
+                            <li class="p-10"><a href="#">Nome Playlist</a></li>
                         </ul>
                     </div>
 
@@ -76,12 +79,15 @@
                 <!-- Profile Settings -->
                 <section id="profile-settings" class="border">
                     <!-- Install App -->
-                    <div class="install-app">
-                        <a href="#"><i class="fa-regular fa-circle-down"></i><span> Installa app</span></a>
+                    <div class="install-app t-center p-10">
+                        <a href="#"><i class="fa-regular fa-circle-down"></i><span class="px-10">Installa app</span></a>
                     </div>
                     <!-- User Profile -->
-                    <div class="profile">
-                        <a href="#"><img src="images/profile.svg" alt="John Doe"> <span><h4>John Doe</h4></span></a>
+                    <div class="profile p-10">
+                        <a class="d-flex align-center" href="#">
+                            <img src="images/profile.svg" alt="John Doe">
+                            <span class="px-10"><h4>John Doe</h4></span>
+                        </a>
                     </div>
                 </section>
             </nav>
@@ -120,7 +126,7 @@
     <footer id="main-footer" class="bg-secondary border">
 
         <!-- Spotify Player -->
-        <section id="player" class="d-flex justify-between h-100 border">
+        <section id="player" class="d-flex justify-between h-100 p-10 border">
 
             <!-- Now Playing | Left Col -->
             <div id="now-playing" class="d-flex justify-between align-center border">
@@ -129,33 +135,33 @@
                     <img class="w-100 h-100" src="images/sinister.jpeg" alt="Sinister">
                 </div>
                 <!-- Track Name -->
-                <div class="track-name border">
+                <div class="track-name px-10 border">
                     <h3>Sinister</h3>
-                    <span>Brano</span>
+                    <span>Brano </span>
                     <span>Nome</span>
                 </div>
                 <!-- Track Actions -->
-                <div class="track-actions d-flex justify-around align-center t-center border">
-                    <a href="#" class="w-50 fa-regular fa-heart"></a>
-                    <a href="#" class="w-50 fa-regular fa-folder"></a>
+                <div class="track-actions d-flex justify-around align-center t-center h-100 border">
+                    <a href="#" class="px-10 fa-regular fa-heart"></a>
+                    <a href="#" class="px-10 fa-regular fa-folder"></a>
                 </div>
             </div>
             
             <!-- Track Controls | Middle Col -->
-            <div id="track-controls" class="d-flex content-center align-center border">
+            <div id="track-controls" class="d-flex content-center align-center w-50 border">
                 <!-- Track Buttons -->
                 <div class="track-btn w-100 d-flex justify-center align-center border">
-                    <a href="#" class="c-white fa-solid fa-shuffle"></a>
-                    <a href="#" class="c-white fa-solid fa-backward-step"></a>
-                    <a href="#" class="c-white fa-solid fa-circle-play"></a>
-                    <a href="#" class="c-white fa-solid fa-forward-step"></a>
-                    <a href="#" class="c-white fa-solid fa-rotate-right"></a>
+                    <a href="#" class="c-white px-10 fa-solid fa-shuffle"></a>
+                    <a href="#" class="c-white px-10 fa-solid fa-backward-step"></a>
+                    <a href="#" class="c-white px-10 fa-solid fa-circle-play"></a>
+                    <a href="#" class="c-white px-10 fa-solid fa-forward-step"></a>
+                    <a href="#" class="c-white px-10 fa-solid fa-rotate-right"></a>
                 </div>
                 <!-- Track Progress Bar -->
                 <div class="progress-bar w-100 d-flex align-center justify-between border">
-                    <span class="progress-time c-white t-center">0:25</span>
-                    <div class="bar"></div>
-                    <span class="total-time c-white t-center">4:35</span>
+                    <span class="progress-time c-white t-center px-10">0:25</span>
+                    <div class="bar w-100"></div>
+                    <span class="total-time c-white t-center px-10">4:35</span>
                 </div>
             </div>
             
@@ -163,13 +169,13 @@
             <div id="player-controls" class="d-flex justify-between">
                 <!-- Controls Buttons -->
                 <div class="player-btn d-flex justify-between align-center">
-                    <a href="#" class="c-white fa-solid fa-list"></a>
-                    <a href="#" class="c-white fa-solid fa-display"></a>
+                    <a href="#" class="px-10 c-white fa-solid fa-list"></a>
+                    <a href="#" class="px-10 c-white fa-solid fa-display"></a>
                 </div>
                 <!-- Volume Bar -->
-                <div class="volume-bar d-flex align-center justify-between">
-                    <a href="#" class="c-white fa-solid fa-volume-high"></a>
-                    <div class="bar"></div>
+                <div class="volume-bar w-100 d-flex align-center justify-between">
+                    <a href="#" class="px-10 c-white fa-solid fa-volume-high"></a>
+                    <div class="bar w-100"></div>
                 </div>
             </div>
         </section>

@@ -27,11 +27,8 @@
 .debug .border .border {border: 2px dashed orange;}
 .debug .border .border .border {border: 2px dashed lightgreen;}
 
-.container{
-    max-width: 1100px;
-    margin: 0 auto;
-}
 
+/* Utilities | Flex */
 .d-flex{display: flex;}
 .justify-center {justify-content: center;}
 .justify-between {justify-content: space-between;}
@@ -39,22 +36,24 @@
 .align-center {align-items: center;}
 .content-center {align-content: center;}
 
+/* Utilities | W/H & Padding */
 .w-50 {width: 50%;}
 .w-100 {width: 100%;}
 
 .h-100 {height: 100%;}
 
 .p-10 {padding: 10px;}
+.px-10 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.p-20 {padding: 20px;}
 .py-20 {
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
-.my-30 {
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-
+/* Utilities | Others */
 .uppercase {text-transform: uppercase;}
 .t-center {text-align: center;}
 
@@ -63,6 +62,7 @@
 .bg-black {background-color: var(--black);}
 .bg-primary {background-color: var(--primary);}
 .bg-secondary {background-color: var(--secondary);}
+
 
 
 /*********** Generics ***********/
@@ -81,14 +81,12 @@ h3, h4 {color: var(--white);}
 
 /*********** Sidebar | Left Side ***********/
 #sidebar {
-    min-width: 50px;
-    max-width: 50px;
+    width: 50px;
     flex-direction: column;
+    overflow-y: hidden;
 }
 
 /* Sidebar Navigation Menu */
-#sidebar-menu {overflow-y: scroll;}
-
 #sidebar-menu a {
     display: flex;
     align-items: center;
@@ -100,19 +98,11 @@ h3, h4 {color: var(--white);}
 
 #sidebar-menu .navigation span {display: none;}
 
-#sidebar-menu .navigation li, 
-#sidebar-menu .main-logo {padding: 10px;}
-
 #sidebar-menu .my-playlist {display: none;}
 
 
 /* Profile Settings */
 #profile-settings span {display: none;}
-
-#profile-settings .install-app {text-align: center;}
-
-#profile-settings .install-app, 
-#profile-settings .profile {padding: 10px;}
 
 #profile-settings .profile img {
     background-color: var(--grey);
@@ -158,55 +148,44 @@ h3, h4 {color: var(--white);}
 
 
 /*********** Main Footer | Bottom Side ***********/
-#main-footer {height: 80px;}
-
-/*********** Spotify Player Section ***********/
-#player {padding: 0 0.5rem;}
-
-/* Now Playing */
-#now-playing {width: 40%;}
-
-#now-playing .album-cover {
-    width: 25%;
-    height: 80%;
+#main-footer {
+    height: 80px;
+    min-width: 480px;
 }
 
-#now-playing .album-cover img {
-    object-fit: contain;
-    width: 80%;}
+/*********** Spotify Player Section ***********/
 
-#now-playing .track-name {width: 45%;}
+/* Now Playing */
+#now-playing {min-width: 150px;}
 
-#now-playing .track-name span {display: block;}
+#now-playing .album-cover {max-width: 60px;}
+
+#now-playing .album-cover img {object-fit: contain;}
+
+#now-playing .track-name span {
+    display: block;
+    font-size: 0.7rem;
+}
 
 #now-playing .track-actions {
-    width: 25%;
-    height: 80%;
     font-size: 0.8rem;
-
     flex-flow: column wrap;
 }
 
 
 /* Track Controls */
 #track-controls {
-    width: 35%;
     flex-flow: column wrap;
+    max-width: 400px;
 }
 
 #track-controls .track-btn {height: 50%;}
 
-#track-controls .track-btn a {padding: 0 0.5rem;}
-
 #track-controls .progress-bar {height: 50%;}
 
-#track-controls .progress-bar span {
-    font-size: 0.8rem;
-    width: 15%;
-}
+#track-controls .progress-bar span {font-size: 0.8rem;}
 
 #track-controls .progress-bar .bar {
-    width:60%;
     height: 5px;
     border-radius: 5px;
     background-color: var(--grey);
@@ -224,19 +203,11 @@ h3, h4 {color: var(--white);}
 
 
 /* Player Controls */
-#player-controls {width: 25%;}
+#player-controls {min-width: 150px;}
 
-#player-controls .player-btn {width: 30%;}
-
-#player-controls .player-btn a {
-    font-size: 0.8rem;
-    padding-right: 5px;
-}
-
-#player-controls .volume-bar {width: 60%;}
+#player-controls .player-btn a {font-size: 0.8rem;}
 
 #player-controls .volume-bar .bar {
-    width: 75%;
     height: 5px;
     border-radius: 5px;
     background-color: var(--grey);
@@ -264,51 +235,35 @@ h3, h4 {color: var(--white);}
     /*********** Main Container ***********/
     /*********** Sidebar | Left Side ***********/
     #sidebar {
-        min-width: 250px;
-        max-width: 250px;
-        padding-left: 20px;
-        padding-right: 20px;
+        width: 250px;
+        flex-shrink: 0;
     }
 
     /* Sidebar Navigation Menu */
     #sidebar-menu .main-logo a:first-child {display: none;}
     #sidebar-menu .main-logo a:last-child {display: block;}
     
-    #sidebar-menu .main-logo img {height: 40px;}
+    #sidebar-menu .main-logo img {height: 50px;}
     
     #sidebar-menu .navigation span,
-    #sidebar-menu .my-playlist span {
-        display: inline-block;
-        padding-left: 5px;
+    #sidebar-menu .my-playlist span {display: inline-block;}
+
+    #sidebar-menu .my-playlist {
+        display: block;
+        max-height: 200px;
+        overflow-y: scroll;
     }
-
-    #sidebar-menu .my-playlist {display: block;}
-
-    #sidebar-menu .navigation li, 
-    #sidebar-menu .main-logo, 
-    #sidebar-menu .my-playlist > *, 
-    #sidebar-menu .my-playlist li {padding: 5px 0;}
-
 
 
     /* Profile Settings */
-    #profile-settings span {
-        display: inline-block;
-        padding-left: 5px;
-    }
-
-    #profile-settings a {
-        display: flex;
-        align-items: center;
-    }
+    #profile-settings span {display: inline-block;}
 
     #profile-settings .install-app {
         text-align: start;
         border-bottom: 1px solid var(--grey);
     }
 
-    #profile-settings .install-app, 
-    #profile-settings .profile {padding: 10px 0;}
+    
 
 
     /*********** Main Content | Right Side ***********/
@@ -316,22 +271,22 @@ h3, h4 {color: var(--white);}
 
     /*********** Main Footer | Bottom Side ***********/
     /*********** Spotify Player Section ***********/
-    #player #now-playing a, 
-    #player #player-controls a {font-size: 1rem;}
-    #player #track-controls a {font-size: 1.5rem;}
-
+    
     /* Now Playing */
-    #now-playing {width: 25%;}
-
+    #now-playing {
+        width: 170px;
+        flex-shrink: 0;
+    }
+    #now-playing .track-name span {display: inline-block;}
+    
     /* Track Controls */
-    #track-controls {width: 50%;}
-
-    #track-controls .track-btn a {padding: 0 1rem;}
-
-    #track-controls .progress-bar {width: 90%;}
+    #track-controls a {font-size: 1.5rem;}
 
     /* Player Controls */
-    #player-controls {width: 25%;}
+    #player-controls {
+        width: 170px;
+        flex-shrink: 0;
+    }
 
 }
 
@@ -354,10 +309,6 @@ h3, h4 {color: var(--white);}
 
     /* Now Playing */
     #now-playing .track-actions {flex-direction: row;}
-    #now-playing .track-name {width: 30%;}
-
-    /* Track Controls */
-    #track-controls .progress-bar .bar {width:85%;}
 
 }
 
