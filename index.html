@@ -17,7 +17,7 @@
     <title>Spotify Web</title>
 </head>
 
-<body class="debugs">
+<body class="debug">
 
     <main>
         <!-- Main Container | To arrange #Sidebar and #Main-Content horizontally -->
@@ -95,35 +95,93 @@
             <!-- Main Content Box | Right Side -->
             <div id="main-content" class="w-100 border">
 
-                <!-- Header of Main Content Box -->
-                <header class="border">
+                <!-- Header of Main Content Box | Sidebar + Upgrade Box -->
+                <header>
 
                     <!-- Upgrade Box | Fixed -->
-                    <div id="upgrade-box" class="w-100 bg-black border"></div>
+                    <div id="upgrade-box" class="d-flex align-center p-20 bg-black border">
+                        <a href="#" class="upgrade-btn h-50 uppercase border">Upgrade</a>
+                    </div>
 
                     <!-- navbar -->
-                    <nav id="main-navbar" class="border">link link link link link link link</nav>
+                    <nav id="main-navbar" class="p-10 border">
+                        <ul class="d-flex justify-center uppercase border">
+                            <li class="p-10 border"><a href="#">linklink</a></li>
+                            <li class="p-10 border"><a href="#">link</a></li>
+                            <li class="p-10 border"><a href="#">linklinklinklink</a></li>
+                            <li class="p-10 border"><a href="#">linklink</a></li>
+                            <li class="p-10 border"><a href="#">link</a></li>
+                            <li class="p-10 border"><a href="#">link</a></li>
+                        </ul>
+                    </nav>
 
                 </header>
+                <div id="content-container" class="px-10">
 
-                <!-- Recently Played Section -->
-                <section id="recently-played">
+                    <!-- Recently Played Section -->
+                    <section id="recently-played" class="py-20 border">
+                        <!-- Title -->
+                        <h2>Recently played</h2>
+                        <!-- Recently Played Track List -->
+                        <div class="row d-flex py-10">
+                            <!-- Single Track -->
+                            <figure class="col t-center py-10">
+                                <img class="w-100" src="images/metal_lifting.jpg" alt="Heavy Metal">
+                                <h3>Heavy Metal</h3>
+                                <h5>Subtitle</h5>
+                            </figure>
+                            <!-- Single Track -->
+                            <figure class="col t-center py-10">
+                                <img class="w-100" src="images/metal_lifting.jpg" alt="Heavy Metal">
+                                <h3>Heavy Metal</h3>
+                                <h5>Subtitle</h5>
+                            </figure>
+                            <!-- Single Track -->
+                            <figure class="col t-center py-10">
+                                <img class="w-100" src="images/metal_lifting.jpg" alt="Heavy Metal">
+                                <h3>Heavy Metal</h3>
+                                <h5>Subtitle</h5>
+                            </figure>
+                            <!-- Single Track -->
+                            <figure class="col t-center py-10">
+                                <img class="w-100" src="images/metal_lifting.jpg" alt="Heavy Metal">
+                                <h3>Heavy Metal</h3>
+                                <h5>Subtitle</h5>
+                            </figure>
+                            <!-- Single Track -->
+                            <figure class="col t-center py-10">
+                                <img class="w-100" src="images/metal_lifting.jpg" alt="Heavy Metal">
+                                <h3>Heavy Metal</h3>
+                                <h5>Subtitle</h5>
+                            </figure>
+
+
+                        </div>
+                    </section>
                     
-                </section>
+                    <!-- Suggestions Playlist Mix -->
+                    <section id="suggestions" class="py-20 border">
+                        <!-- Title & Subtitle-->
+                        <h2>Creato per John Doe</h2>
+                        <h5>Più ascolti, più accurati saranno i suggerimenti.</h5>
 
-                <!-- Suggestions Playlist Mix -->
-                <section id="suggestions"></section>
+                    </section>
+                    
+                    <!-- Most Popular Artists -->
+                    <section id="popular-artists" class="py-20 border">
+                        <!-- Title & Subtitle-->
+                        <h2>Artisti più popolari</h2>
+                        <h5>Più ascolti, più accurati saranno i suggerimenti.</h5>
 
-                <!-- Most Popular Artists -->
-                <section id="popular-artists"></section>
+                    </section>
 
-            </div>
+                </div>
                 
-        </div>
-    </main>
-
-    <!-- Main Footer | Bottom Side -->
-    <footer id="main-footer" class="bg-secondary border">
+            </div>
+        </main>
+        
+        <!-- Main Footer | Bottom Side -->
+        <footer id="main-footer" class="bg-secondary border">
 
         <!-- Spotify Player -->
         <section id="player" class="d-flex justify-between h-100 p-10 border">

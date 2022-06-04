@@ -47,6 +47,10 @@
     padding-left: 10px;
     padding-right: 10px;
 }
+.py-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 .p-20 {padding: 20px;}
 .py-20 {
     padding-top: 20px;
@@ -66,9 +70,12 @@
 
 
 /*********** Generics ***********/
+body {min-width: 480px;}
+
 header {padding-top: 80px;}
 
-h3, h4 {color: var(--white);}
+h2, h3, h4 {color: var(--white);}
+h5 {font-size: 0.7rem;}
 
 
 /* ******************************************** */
@@ -114,44 +121,60 @@ h3, h4 {color: var(--white);}
 
 
 /*********** Main Content | Right Side ***********/
-#main-content {
-    overflow-y: auto;
-}
-
+#main-content {overflow-y: auto;}
 
 /*********** Header ***********/
-/*********** [Header] Upgrade Box ***********/
+
+/* Upgrade Box */
 #upgrade-box {
     height: 80px;
+    width: calc(100% - 50px);
     position: fixed;
     top: 0;
+    flex-direction: row-reverse;
 
-    opacity: 0.4;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#upgrade-box .upgrade-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--white);
+    color: var(--white);
+    border-radius: 30px;
+}
+
+/* Main Navbar */
+#main-navbar ul {flex-wrap: wrap;}
+
+
+/*********** Content Container ***********/
+
+/* Recently Played Section */
+#recently-played {min-height: 100px;/*REMOVE*/}
+
+#recently-played .row {margin: 0 -10px; flex-wrap: wrap;}
+
+#recently-played .row .col {width: calc(100% / 2 - 20px);}
+
+#recently-played figure {
+    min-height: 150px; /*REMOVE*/
+
+    background-color: lightgreen;/*REMOVE*/
+    margin: 0 10px;
 }
 
 
-/*********** [Header] Main Navbar ***********/
-#main-navbar {}
+/* Suggestions Playlist Mix Section */
+#suggestions {min-height: 100px;/*REMOVE*/}
 
 
-/*********** Recently Played Section ***********/
-#recently-played {}
-
-
-/*********** Suggestions Playlist Mix Section ***********/
-#suggestions {}
-
-
-/*********** Most Popular Artists Section ***********/
-#popular-artists {}
+/* Most Popular Artists Section */
+#popular-artists {min-height: 100px;/*REMOVE*/}
 
 
 
 /*********** Main Footer | Bottom Side ***********/
-#main-footer {
-    height: 80px;
-    min-width: 480px;
-}
+#main-footer {height: 80px;}
 
 /*********** Spotify Player Section ***********/
 
@@ -265,9 +288,13 @@ h3, h4 {color: var(--white);}
 
     
 
-
     /*********** Main Content | Right Side ***********/
-   
+
+    /*********** [Header] Upgrade Box ***********/
+    #upgrade-box {width: calc(100% - 250px);}
+
+
+
 
     /*********** Main Footer | Bottom Side ***********/
     /*********** Spotify Player Section ***********/
