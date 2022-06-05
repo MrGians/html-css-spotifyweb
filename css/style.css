@@ -30,21 +30,27 @@
 
 /* Utilities | Flex */
 .d-flex{display: flex;}
+.flex-col {flex-direction: column;}
+.flex-row-rev {flex-direction: row-reverse;}
+.flex-wrap {flex-wrap: wrap;}
 .justify-center {justify-content: center;}
 .justify-between {justify-content: space-between;}
 .justify-around {justify-content: space-around;}
 .align-center {align-items: center;}
 .content-center {align-content: center;}
 
-/* Utilities | W/H & Padding */
+/* Utilities | Row & Column */
 .row {margin: 0 -10px}
 .row .col {margin: 0 10px}
 
+/* Utilities | Width & Height */
 .w-50 {width: 50%;}
 .w-100 {width: 100%;}
 
+.h-50 {height: 50%;}
 .h-100 {height: 100%;}
 
+/* Utilities | Padding & Margin */
 .p-10 {padding: 10px;}
 .px-10 {
     padding-left: 10px;
@@ -60,16 +66,19 @@
     padding-bottom: 20px;
 }
 
-/* Utilities | Others */
+/* Utilities | Text, Colors & Others */
+.font-xs {font-size: 0.8rem;}
+
 .uppercase {text-transform: uppercase;}
 .t-center {text-align: center;}
+
+.br-50 {border-radius: 50%;}
 
 .c-white {color: var(--white);}
 
 .bg-black {background-color: var(--black);}
 .bg-primary {background-color: var(--primary);}
 .bg-secondary {background-color: var(--secondary);}
-
 
 
 /*********** Generics ***********/
@@ -86,13 +95,12 @@ h5 {font-size: 0.7rem;}
 /* ******************************************** */
 
 
-/*********** Main Container ***********/
+/*********** MAIN CONTAINER | Sidebar + Main Content ***********/
 #main-container {height: calc(100vh - 80px);}
 
 /*********** Sidebar | Left Side ***********/
 #sidebar {
     width: 50px;
-    flex-direction: column;
     overflow-y: hidden;
 }
 
@@ -118,7 +126,6 @@ h5 {font-size: 0.7rem;}
     background-color: var(--grey);
     height: 30px;
     width: 30px;
-    border-radius: 50%;
     object-fit: contain;
 }
 
@@ -126,15 +133,13 @@ h5 {font-size: 0.7rem;}
 /*********** Main Content | Right Side ***********/
 #main-content {overflow-y: auto;}
 
-/*********** Header ***********/
 
-/* Upgrade Box */
+/* [Header] Upgrade Box */
 #upgrade-box {
     height: 80px;
     width: calc(100% - 50px);
     position: fixed;
     top: 0;
-    flex-direction: row-reverse;
 
     background-color: rgba(0, 0, 0, 0.7);
 }
@@ -146,28 +151,15 @@ h5 {font-size: 0.7rem;}
     border-radius: 30px;
 }
 
-/* Main Navbar */
-#main-navbar ul {flex-wrap: wrap; font-size: 0.8rem;}
+/*
+    [Header] Main Navbar
+    NO CODE REQUIRED 
+*/
 
-
-/*********** Content Container ***********/
+/* Content Container */
 #recently-played .col, 
 #suggestions .col, 
 #popular-artists .col {width: calc(100% / 2 - 20px);}
-
-/* Recently Played Section */
-#recently-played .row {flex-wrap: wrap;}
-
-
-/* Suggestions Playlist Mix Section */
-#suggestions .row {flex-wrap: wrap;}
-
-
-/* Most Popular Artists Section */
-#popular-artists .row {flex-wrap: wrap;}
-
-#popular-artists .col img {border-radius: 50%;}
-
 
 
 /*********** Main Footer | Bottom Side ***********/
@@ -182,28 +174,11 @@ h5 {font-size: 0.7rem;}
 
 #now-playing .album-cover img {object-fit: contain;}
 
-#now-playing .track-name span {
-    display: block;
-    font-size: 0.7rem;
-}
-
-#now-playing .track-actions {
-    font-size: 0.8rem;
-    flex-flow: column wrap;
-}
+#now-playing .track-name span {display: block;}
 
 
 /* Track Controls */
-#track-controls {
-    flex-flow: column wrap;
-    max-width: 400px;
-}
-
-#track-controls .track-btn {height: 50%;}
-
-#track-controls .progress-bar {height: 50%;}
-
-#track-controls .progress-bar span {font-size: 0.8rem;}
+#track-controls {max-width: 400px;}
 
 #track-controls .progress-bar .bar {
     height: 5px;
@@ -225,14 +200,11 @@ h5 {font-size: 0.7rem;}
 /* Player Controls */
 #player-controls {min-width: 150px;}
 
-#player-controls .player-btn a {font-size: 0.8rem;}
-
 #player-controls .volume-bar .bar {
     height: 5px;
     border-radius: 5px;
     background-color: var(--grey);
 }
-
 
 #player-controls .volume-bar .bar::before {
     content: "";
@@ -252,7 +224,7 @@ h5 {font-size: 0.7rem;}
 /* Responsive Mobile View from 576px to 767px */
 @media screen and (min-width: 576px) {
 
-    /*********** Main Container ***********/
+    /*********** MAIN CONTAINER | Sidebar + Main Content ***********/
     /*********** Sidebar | Left Side ***********/
     #sidebar {
         width: 250px;
@@ -287,10 +259,19 @@ h5 {font-size: 0.7rem;}
 
     /*********** Main Content | Right Side ***********/
 
-    /*********** [Header] Upgrade Box ***********/
+    /* [Header] Upgrade Box */
     #upgrade-box {width: calc(100% - 250px);}
 
+    /*
+    [Header] Main Navbar
+    NO CODE REQUIRED 
+    */
 
+
+    /*
+    Content Container
+    NO CODE REQUIRED 
+    */
 
 
     /*********** Main Footer | Bottom Side ***********/
@@ -318,12 +299,17 @@ h5 {font-size: 0.7rem;}
 /* Responsive Tablet View from 768px to 991px */
 @media screen and (min-width: 768px) {
 
-    /*********** Main Container ***********/
-    /*********** Sidebar | Left Side ***********/
+    /*********** MAIN CONTAINER | Sidebar + Main Content ***********/
+    
+    /*
+    Sidebar | Left Side
+    NO CODE REQUIRED 
+    */
 
 
     /*********** Main Content | Right Side ***********/
-    /*********** Content Container ***********/
+
+    /* Content Container */
     #recently-played .col, 
     #suggestions .col, 
     #popular-artists .col {width: calc(100% / 4 - 20px);}
@@ -331,7 +317,7 @@ h5 {font-size: 0.7rem;}
 
     /*********** Main Footer | Bottom Side ***********/
 
-   /*********** Spotify Player Section ***********/
+    /*********** Spotify Player Section ***********/
     #player #now-playing {width: 250px;}
     #player #player-controls {width: 250px;}
 
@@ -344,12 +330,17 @@ h5 {font-size: 0.7rem;}
 /* Responsive Desktop View from 992px */
 @media screen and (min-width: 992px) {
 
-    /*********** Main Container ***********/
-    /*********** Sidebar | Left Side ***********/
+    /*********** MAIN CONTAINER | Sidebar + Main Content ***********/
+    
+    /*
+    Sidebar | Left Side
+    NO CODE REQUIRED 
+    */
 
 
     /*********** Main Content | Right Side ***********/
-    /*********** Content Container ***********/
+
+    /* Content Container */
     #recently-played .col, 
     #suggestions .col, 
     #popular-artists .col {width: calc(100% / 6 - 20px);}
@@ -357,6 +348,9 @@ h5 {font-size: 0.7rem;}
 
     /*********** Main Footer | Bottom Side ***********/
 
-    /*********** Spotify Player Section ***********/
-
+    /*
+    Spotify Player Section
+    NO CODE REQUIRED 
+    */
+    
 }

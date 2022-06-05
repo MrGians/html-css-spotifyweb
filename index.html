@@ -17,17 +17,17 @@
     <title>Spotify Web</title>
 </head>
 
-<body class="debugs">
+<body>
 
     <main>
         <!-- Main Container | To arrange #Sidebar and #Main-Content horizontally -->
-        <div id="main-container" class="d-flex bg-primary border">
+        <div id="main-container" class="d-flex bg-primary">
 
             <!-- Sidebar | Left Side -->
-            <nav id="sidebar" class="d-flex justify-between bg-black border">
+            <nav id="sidebar" class="d-flex flex-col justify-between bg-black">
 
                 <!-- Sidebar Navigation Menu -->
-                <section id="sidebar-menu" class="border">
+                <section id="sidebar-menu">
                     <!-- Spotify Main Logo -->
                     <div class="main-logo p-10">
                         <!-- Logo X-Small -->
@@ -77,15 +77,15 @@
                 </section>
 
                 <!-- Profile Settings -->
-                <section id="profile-settings" class="border">
+                <section id="profile-settings" class="px-10">
                     <!-- Install App -->
-                    <div class="install-app t-center p-10">
+                    <div class="install-app t-center py-10">
                         <a href="#"><i class="fa-regular fa-circle-down"></i><span class="px-10">Installa app</span></a>
                     </div>
                     <!-- User Profile -->
-                    <div class="profile p-10">
+                    <div class="profile py-10">
                         <a class="d-flex align-center" href="#">
-                            <img src="images/profile.svg" alt="John Doe">
+                            <img class="br-50" src="images/profile.svg" alt="John Doe">
                             <span class="px-10"><h4>John Doe</h4></span>
                         </a>
                     </div>
@@ -93,37 +93,35 @@
             </nav>
 
             <!-- Main Content Box | Right Side -->
-            <div id="main-content" class="w-100 border">
+            <div id="main-content" class="w-100">
 
                 <!-- Header of Main Content Box | Sidebar + Upgrade Box -->
                 <header>
-
                     <!-- Upgrade Box | Fixed -->
-                    <div id="upgrade-box" class="d-flex align-center p-20 bg-black border">
-                        <a href="#" class="upgrade-btn h-50 uppercase border">Upgrade</a>
+                    <div id="upgrade-box" class="d-flex flex-row-rev align-center p-20 bg-black">
+                        <a href="#" class="upgrade-btn uppercase">Upgrade</a>
                     </div>
-
                     <!-- navbar -->
-                    <nav id="main-navbar" class="p-10 border">
-                        <ul class="d-flex justify-center uppercase border">
-                            <li class="p-10 border"><a href="#">In evidenza</a></li>
-                            <li class="p-10 border"><a href="#">Podcast</a></li>
-                            <li class="p-10 border"><a href="#">Classifiche</a></li>
-                            <li class="p-10 border"><a href="#">Generi e Mood</a></li>
-                            <li class="p-10 border"><a href="#">Nuove Uscite</a></li>
-                            <li class="p-10 border"><a href="#">Scopri</a></li>
+                    <nav id="main-navbar" class="p-10">
+                        <ul class="d-flex flex-wrap justify-center font-xs uppercase">
+                            <li class="p-10"><a href="#">In evidenza</a></li>
+                            <li class="p-10"><a href="#">Podcast</a></li>
+                            <li class="p-10"><a href="#">Classifiche</a></li>
+                            <li class="p-10"><a href="#">Generi e Mood</a></li>
+                            <li class="p-10"><a href="#">Nuove Uscite</a></li>
+                            <li class="p-10"><a href="#">Scopri</a></li>
                         </ul>
                     </nav>
-
                 </header>
+                <!-- Content of Main Content Box | Tracks & Playlists Sections -->
                 <div id="content-container" class="px-10">
 
                     <!-- Recently Played Section -->
-                    <section id="recently-played" class="py-20 border">
+                    <section id="recently-played" class="py-20">
                         <!-- Title -->
                         <h2>Recently played</h2>
                         <!-- Recently Played Track List -->
-                        <div class="row d-flex py-10">
+                        <div class="row d-flex flex-wrap py-10">
                             <!-- Single Track -->
                             <figure class="col t-center py-10">
                                 <img class="w-100" src="images/metal_lifting.jpg" alt="Heavy Metal">
@@ -164,12 +162,12 @@
                     </section>
                     
                     <!-- Suggestions Playlist Mix -->
-                    <section id="suggestions" class="py-20 border">
+                    <section id="suggestions" class="py-20">
                         <!-- Title & Subtitle-->
                         <h2>Creato per John Doe</h2>
                         <h5>Più ascolti, più accurati saranno i suggerimenti.</h5>
                         <!-- Suggestions Playlist List -->
-                        <div class="row d-flex py-10">
+                        <div class="row d-flex flex-wrap py-10">
                             <!-- Single Playlist -->
                             <figure class="col t-center py-10">
                                 <img class="w-100" src="images/radar.jpeg" alt="Release Radar">
@@ -184,20 +182,20 @@
                     </section>
                     
                     <!-- Most Popular Artists -->
-                    <section id="popular-artists" class="py-20 border">
+                    <section id="popular-artists" class="py-20">
                         <!-- Title & Subtitle-->
                         <h2>Artisti più popolari</h2>
                         <h5>Più ascolti, più accurati saranno i suggerimenti.</h5>
                         <!-- Popular Artists List -->
-                        <div class="row d-flex py-10">
+                        <div class="row d-flex flex-wrap py-10">
                             <!-- Single Artist -->
                             <figure class="col t-center py-10">
-                                <img class="w-100" src="images/youg.jpeg" alt="Lana del Rey">
+                                <img class="w-100 br-50" src="images/youg.jpeg" alt="Lana del Rey">
                                 <h3>Lana del Rey</h3>
                             </figure>
                             <!-- Single Artist -->
                             <figure class="col t-center py-10">
-                                <img class="w-100" src="images/einaudi.jpeg" alt="Ludovico Einaudi">
+                                <img class="w-100 br-50" src="images/einaudi.jpeg" alt="Ludovico Einaudi">
                                 <h3>Ludovico Einaudi</h3>
                             </figure>
                         </div>
@@ -206,37 +204,38 @@
                 </div>
                 
             </div>
-        </main>
+        </div>
+    </main>
         
-        <!-- Main Footer | Bottom Side -->
-        <footer id="main-footer" class="bg-secondary border">
+    <!-- Main Footer | Bottom Side -->
+    <footer id="main-footer" class="bg-secondary">
 
         <!-- Spotify Player -->
-        <section id="player" class="d-flex justify-between h-100 p-10 border">
+        <section id="player" class="d-flex justify-between h-100 p-10">
 
             <!-- Now Playing | Left Col -->
-            <div id="now-playing" class="d-flex justify-between align-center border">
+            <div id="now-playing" class="d-flex justify-between align-center">
                 <!-- Track Album Cover -->
-                <div class="album-cover t-center border">
+                <div class="album-cover t-center">
                     <img class="w-100 h-100" src="images/sinister.jpeg" alt="Sinister">
                 </div>
                 <!-- Track Name -->
-                <div class="track-name px-10 border">
+                <div class="track-name px-10">
                     <h3>Sinister</h3>
-                    <span>Brano </span>
-                    <span>Nome</span>
+                    <span class="font-xs">Brano </span>
+                    <span class="font-xs">Nome</span>
                 </div>
                 <!-- Track Actions -->
-                <div class="track-actions d-flex justify-around align-center t-center h-100 border">
+                <div class="track-actions h-100 d-flex flex-col flex-wrap justify-around align-center t-center font-xs">
                     <a href="#" class="px-10 fa-regular fa-heart"></a>
                     <a href="#" class="px-10 fa-regular fa-folder"></a>
                 </div>
             </div>
             
             <!-- Track Controls | Middle Col -->
-            <div id="track-controls" class="d-flex content-center align-center w-50 border">
+            <div id="track-controls" class="d-flex flex-col flex-wrap content-center align-center w-50">
                 <!-- Track Buttons -->
-                <div class="track-btn w-100 d-flex justify-center align-center border">
+                <div class="track-btn w-100 h-50 d-flex justify-center align-center">
                     <a href="#" class="c-white px-10 fa-solid fa-shuffle"></a>
                     <a href="#" class="c-white px-10 fa-solid fa-backward-step"></a>
                     <a href="#" class="c-white px-10 fa-solid fa-circle-play"></a>
@@ -244,17 +243,17 @@
                     <a href="#" class="c-white px-10 fa-solid fa-rotate-right"></a>
                 </div>
                 <!-- Track Progress Bar -->
-                <div class="progress-bar w-100 d-flex align-center justify-between border">
-                    <span class="progress-time c-white t-center px-10">0:25</span>
+                <div class="progress-bar w-100 h-50 d-flex align-center justify-between">
+                    <span class="progress-time c-white t-center font-xs px-10">0:25</span>
                     <div class="bar w-100"></div>
-                    <span class="total-time c-white t-center px-10">4:35</span>
+                    <span class="total-time c-white t-center font-xs px-10">4:35</span>
                 </div>
             </div>
             
             <!-- Player Controls | Right Col -->
             <div id="player-controls" class="d-flex justify-between">
                 <!-- Controls Buttons -->
-                <div class="player-btn d-flex justify-between align-center">
+                <div class="player-btn d-flex justify-between align-center font-xs">
                     <a href="#" class="px-10 c-white fa-solid fa-list"></a>
                     <a href="#" class="px-10 c-white fa-solid fa-display"></a>
                 </div>
