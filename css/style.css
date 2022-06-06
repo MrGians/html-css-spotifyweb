@@ -110,7 +110,7 @@ h5 {font-size: 0.7rem;}
     align-items: center;
 }
 
-#sidebar-menu li:hover * {color: var(--white);} /*OPEN TICKET ABOUT*/
+#sidebar-menu li:hover * {color: var(--white);}
 
 #sidebar-menu .main-logo a:last-child {display: none;}
 
@@ -339,16 +339,6 @@ h5 {font-size: 0.7rem;}
     /* [Header] Upgrade Box */
     #upgrade-box {width: calc(100% - 250px);}
 
-    /*
-    [Header] Main Navbar
-    NO CODE REQUIRED 
-    */
-
-
-    /*
-    Content Container
-    NO CODE REQUIRED 
-    */
 
 
     /*********** Main Footer | Bottom Side ***********/
@@ -378,13 +368,6 @@ h5 {font-size: 0.7rem;}
 @media screen and (min-width: 768px) {
 
     /*********** MAIN CONTAINER | Sidebar + Main Content ***********/
-    
-    /*
-    Sidebar | Left Side
-    NO CODE REQUIRED 
-    */
-
-
     /*********** Main Content | Right Side ***********/
 
     /* Content Container */
@@ -394,7 +377,6 @@ h5 {font-size: 0.7rem;}
 
 
     /*********** Main Footer | Bottom Side ***********/
-
     /*********** Spotify Player Section ***********/
     #player #now-playing {width: 250px;}
     #player #player-controls {width: 250px;}
@@ -409,26 +391,12 @@ h5 {font-size: 0.7rem;}
 @media screen and (min-width: 992px) {
 
     /*********** MAIN CONTAINER | Sidebar + Main Content ***********/
-    
-    /*
-    Sidebar | Left Side
-    NO CODE REQUIRED 
-    */
-
-
     /*********** Main Content | Right Side ***********/
 
     /* Content Container */
     #recently-played .col, 
     #suggestions .col, 
-    #popular-artists .col {width: calc(100% / 6 - 20px);}
-   
-
-    /*********** Main Footer | Bottom Side ***********/
-
-    /*
-    Spotify Player Section
-    NO CODE REQUIRED 
-    */
+    #popular-artists .col {width: calc(100% / 6 - 20px);
+    }
     
 }
